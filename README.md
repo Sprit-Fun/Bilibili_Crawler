@@ -4,11 +4,10 @@
 # Contact: richardlu0928@gmail.com
 
 Description:
-Enable the ability to crawl comments at Bilibili, then convert all comments to a .txt file.
+Implemented the ability to crawl comments at Bilibili.com, then are able to convert all comments to a local text file.
 
 Direction of use: 
-Clone the repository to your local machine, run bilibili_crawler.py directly with IDLE installed, 
-then execute the program.
+Clone this repository to your local machine, run bilibili_crawler.py with IDLE installed, then execute the program.
 
 Special Thanks:
 https://blog.csdn.net/qq_44861455
