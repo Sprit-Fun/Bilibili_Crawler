@@ -2,28 +2,32 @@
 # Author: Richard Lu
 # Project name: Bilibili Crawler
 # Date Started: April 2020
-# Contact: richardlu0928@gmail.com
-# Total Time used: 2 hours
-# Last Updated: 2020/12/29
-# Version: 1.0
+# Contact: admin@richardlu.ca
+# Repo: https://github.com/Sprit-Fun/Bilibili_Crawler
+# Total Time used: 3 hours
+# Last Updated: 2022/01/03
+# Version: 1.01
 """
 
-# This program can crawl Bilibili comments and transform into a text file.
-# Run the program with IDLE to edit contacts locally.
-# Special Thanks: https://blog.csdn.net/qq_44861455.
+# This program can crawl Bilibili comments into a local file.
+# Run the program with any Python interpreter to crawl comments.
+# Special Thanks: https://blog.csdn.net/qq_44861455
 
 import requests
 import json
 from time import sleep
 
-print("Welcome to Bilibili Crawler, a program optimized by Richard Lu, "
-      "special thanks to aka.")
-sleep(0.5)
+
+print("Welcome to Bilibili Crawler V1.01 optimized by Richard Lu.")
+print("Special thanks to aka.")
+
 headers = {
     'User-Agent': 'XXX'
 }
+
 # BV Number.
-bv = input('Please input the BV Number found directly on Bilibili: ')
+bv = input('Please input the BV Number found directly on Bilibili (Format '
+           'BV16f4y147Uz): ')
 # Comment pages, 1 by default.
 pn = 1
 # 0 to sort by time, 2 to sort by most popular.
@@ -58,9 +62,9 @@ def enc(x: str):  # Input OID outputs BV Number.
 
 # BV to OID
 oid = dec(bv)
-file_name = input("Which text file name to save to, or create a new text file "
-                  "if not exist: ")
-fp = open(file_name + ".txt", "w", encoding="UTF-8")
+file_name = input("Which file name to save to, or create a new file if not "
+                  "exist: ")
+fp = open(file_name, "w", encoding="UTF-8")
 i = 1
 
 while True:
@@ -93,5 +97,6 @@ while True:
         fp.close()
         break
 
-print("All comments are crawled, check the local repository for outputs.")
+print("All comments have been successfully crawled, please check the local "
+      "file for crawled comments.")
 print("Thanks for using the program.")
